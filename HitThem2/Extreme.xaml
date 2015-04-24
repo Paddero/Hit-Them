@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="HitThem2.Extreme"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="728"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,0,0">
+            <Image Height="125" HorizontalAlignment="Left" Margin="8,90,0,0" Name="image1" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image1" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="148,90,0,0" Name="image2" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image2" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="288,90,0,0" Name="image3" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image3" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Right" Margin="0,90,148,0" Name="image4" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image4" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="567,90,0,0" Name="image5" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image5" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="8,220,0,0" Name="image6" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image6" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="148,220,0,0" Name="image7" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image7" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="288,221,0,0" Name="image8" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image8" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="428,221,0,0" Name="image9" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image9" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="567,221,0,0" Name="image10" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image10" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="8,351,0,0" Name="image11" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image11" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="148,351,0,0" Name="image12" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image12" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="288,351,0,0" Name="image13" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image13" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="428,351,0,0" Name="image14" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image14" VerticalAlignment="Top" Width="140" />
+            <Image Height="125" HorizontalAlignment="Left" Margin="567,351,0,0" Name="image15" Tap="Guess_Tap" Source="/HitThem2;component/Images/hole.png" Stretch="Fill" Tag="image15" VerticalAlignment="Top" Width="140" />
+            <TextBlock FontFamily="Segoe WP" FontSize="36" FontWeight="SemiBold" Foreground="#FFC1C1C1" Height="49" HorizontalAlignment="Left" Margin="49,25,0,0" Name="myTextBlock" Text="Time Left: 60" VerticalAlignment="Top" Width="242" />
+            <TextBlock FontSize="36" FontWeight="SemiBold" Foreground="#FF96A354" Height="49" HorizontalAlignment="Left" Margin="487,25,0,0" Name="scoreBlock" Text="" VerticalAlignment="Top" />
+            <Button Background="{x:Null}" BorderBrush="#FFC1C1C1" BorderThickness="6" Content="Play" FontFamily="Segoe WP" FontSize="40" FontWeight="SemiBold" Foreground="#FF7C944A" Height="94" HorizontalAlignment="Left" Margin="393,0,0,0" Name="button1" Padding="10,3,10,5" VerticalAlignment="Top" VerticalContentAlignment="Top" Visibility="Visible" Width="317" Click="button1_Click_1" />
+            <Grid.Background>
+                <ImageBrush ImageSource="/HitThem2;component/Images/background.jpg" Opacity="0.8" Stretch="None" />
+            </Grid.Background>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
